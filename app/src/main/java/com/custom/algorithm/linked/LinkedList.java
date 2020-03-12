@@ -23,7 +23,7 @@ public class LinkedList<T> {
         }
     }
 
-    public void add(T t) {
+    public synchronized void add(T t) {
         linkLast(t);
     }
 
@@ -44,7 +44,7 @@ public class LinkedList<T> {
         size++;
     }
 
-    public T get(int index) {
+    public synchronized T get(int index) {
         if (index < 0 || index > size) {
             return null;
         }
@@ -79,7 +79,7 @@ public class LinkedList<T> {
      *
      * @author Ysw created at 2020/3/12 12:56
      */
-    public void add(int index, T t) {
+    public synchronized void add(int index, T t) {
         if (index < 0 || index > size) {
             return;
         }
@@ -99,7 +99,7 @@ public class LinkedList<T> {
         }
     }
 
-    public void remove(int index) {
+    public synchronized void remove(int index) {
         Node<T> target = node(index);
         unlinkNode(target);
     }
@@ -131,7 +131,7 @@ public class LinkedList<T> {
      *
      * @author Ysw created at 2020/3/12 13:06
      */
-    public int size() {
+    public synchronized int size() {
         return size;
     }
 }

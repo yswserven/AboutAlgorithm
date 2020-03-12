@@ -140,8 +140,6 @@ public class ExampleInstrumentedTest {
         Log.d("Ysw", "testCustomLinkedList: index 6 = " + integer);
         Log.d("Ysw", "testCustomLinkedList: ==============================================");
 
-        // TODO: Create by Ysw 2020/3/12 按照上满的添加操作再进行删除会有错误
-        // TODO: Create by Ysw 2020/3/12 应该是线程安全问题，单独进行删除不存在问题
         list.remove(3);
         for (int i = 0; i < list.size(); i++) {
             Log.d("Ysw", "testCustomLinkedList: " + list.get(i));
